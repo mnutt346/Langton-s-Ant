@@ -9,8 +9,11 @@
 
 
 /*
- * Ant constructor initializes the Ant's starting position, sets the currentSpaceColor
- * to white, the direction to east, and the moveCounter to 0.
+ * Summary: Ant constructor initializes the Ant's starting position, provides a reference to
+ * the board object, and sets the initial direction to east.
+ * Param: int row -> defines the current row on which the ant currently sits
+ * Param: int col -> defines the current column on which the ant currently sits
+ * Returns: N/A   
  */
 Ant::Ant(int row, int col, Board *brd)
 {
@@ -22,8 +25,10 @@ Ant::Ant(int row, int col, Board *brd)
 
 
 /*
- * The getCurrentRow method returns the row on which the ant currently sits to be
+ * Summary: The getCurrentRow method returns the row on which the ant currently sits. To be
  * used when checking if a proposed move is valid.
+ * Param: N/A
+ * Returns: int representing the row on which the ant currently sits
  */
 int Ant::getCurrentRow()
 {
@@ -32,8 +37,10 @@ int Ant::getCurrentRow()
 
 
 /*
- * The getCurrentCol method returns the column on which the ant currently sits to be
+ * Summary: The getCurrentCol method returns the column on which the ant currently sits. To be
  * used when checking if a proposed move is valid.
+ * Param: N/A
+ * Returns: int representing the column on which the ant currently sits
  */
 int Ant::getCurrentCol()
 {
@@ -42,18 +49,10 @@ int Ant::getCurrentCol()
 
 
 /*
- * The getCurrentDirection method returns the direction the ant currently is
- * currently facing. To be used when checking if a proposed move is valid.
- */
-char Ant::getCurrentDirection()
-{
-  return direction;
-}
-
-
-/*
- * The turnOnBlack method turns the ant 90 degrees to the left when the ant is on a
+ * Summary: The turnOnBlack method turns the ant 90 degrees to the left when the ant is on a
  * black square.
+ * Param: N/A
+ * Returns: N/A
  */
 void Ant::turnOnBlack()
 {
@@ -76,8 +75,10 @@ void Ant::turnOnBlack()
 
 
 /*
- * The turnOnWhite method turns the and 90 degrees to the right when the and is on a
+ * Summary: The turnOnWhite method turns the and 90 degrees to the right when the and is on a
  * white square.
+ * Param: N/A
+ * Returns: N/A
  */
 void Ant::turnOnWhite()
 {
@@ -100,8 +101,11 @@ void Ant::turnOnWhite()
 
 
 /*
- * The moveAnt method moves the ant one space after changing direction based on the
+ * Summary: The moveAnt method moves the ant one space after changing direction based on the
  * color of the square in which it currently sits. 
+ * Param: int row -> passes the row on which the ant currently sits
+ * Param: int col -> passes the column on which the ant currently sits
+ * Return: N/A
  */
 void Ant::moveAnt(int row, int col)
 {
@@ -153,8 +157,10 @@ void Ant::moveAnt(int row, int col)
 
 
 /*
- * The reverseDirection method rotates the ant 180 degrees and moves the ant 
+ * Summary: The reverseDirection method rotates the ant 180 degrees and moves the ant 
  * one space in the new direction. To be used if the ant's next move will be invalid.
+ * Param: N/A
+ * Return: N/A
  */
 void Ant::reverseDirection()
 {

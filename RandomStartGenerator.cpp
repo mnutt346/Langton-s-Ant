@@ -12,12 +12,18 @@
 #include "RandomStartGenerator.hpp"
 #include "InputValidation.hpp"
 #include <iostream>
+#include <stdlib.h>
 
 using std::cin;
 using std::cout;
 using std::endl;
 
 
+/* Summary: Prompts the user to either choose the ant's position themselves or to have
+ * the starting point be randomly generated
+ * Param: N/A
+ * Return: boolean value representing the user's choice
+ */
 bool selectRandomStart()
 {
   int randomStartChoice;
@@ -49,6 +55,10 @@ bool selectRandomStart()
 }
 
 
+/* Summary: Generates a random number from 0 to the upper bound (dimension of the board)
+ * Param: int upperBound -> represents the edge of the board
+ * Return: a randomly-generated integer to be used as either the starting row or column
+ */
 int generateRandomStart(int upperBound)
 {
   int randomStart = rand() % upperBound + 0;

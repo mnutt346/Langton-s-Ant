@@ -2,8 +2,8 @@
 ** Program name: InputValidation.cpp
 ** Author: Michael Nutt
 ** Date: 10/03/2019
-** Description: Definitions of the checkIntegerInput and isIntegerInput functions.
-** The checkIntegerInput function gets the input from the user and determines wheter
+** Description: Definitions of the convertInputToInt and isIntegerInput functions.
+** The convertInputToInt function gets the input from the user and determines wheter
 ** that input is a positive integer. If not, the function continues to loop until the
 ** user submits a positive integer.
 **************************************************************************************/
@@ -12,11 +12,14 @@
 using std::cout;
 using std::cin;
 using std::endl;
-using std::getline;
 using std::atoi;
 using std::string;
 
 
+/* Summary: Determines whether a given input is an integer.
+ * Param: string input -> the input string provided by the user
+ * Return: A boolean value representing whether the user input is an integer
+ */
 bool isIntegerInput(string input)
 {
   for (int i = 0; i < input.size(); i++)
@@ -31,6 +34,11 @@ bool isIntegerInput(string input)
 }
 
 
+/* Summary: Attempts to convert user input to an integer. If unsuccessful,
+ * prompts the user to enter a new value as a positive integer.
+ * Param: N/A
+ * Return: The user input converted to an integer.
+ */
 int convertInputToInt()
 {
   string input;

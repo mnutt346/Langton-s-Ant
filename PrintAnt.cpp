@@ -12,7 +12,11 @@
 using std::cout;
 using std::endl;
 
-
+/* Summary: Prints the board along with the current values of all spaces (' ', '*', or '#')
+ * Param: Ant ant -> the ant object, used to track it's location
+ * Param: Board *board -> pointer used to track the state of the board
+ * Return: N/A
+ */
 void printAnt(Ant ant, Board *board)
 {
   // Get the dimensions of the board
